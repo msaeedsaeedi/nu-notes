@@ -1,0 +1,25 @@
+{
+	"name": "NU-Notes",
+	"image": "node:latest",
+	"remoteUser": "node",
+	"forwardPorts": [3000],
+	"portsAttributes": {
+		"3000": {
+			"label": "Application",
+			"onAutoForward": "notify"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph",
+                "seatonjiang.gitmoji-vscode",
+                "ms-azuretools.vscode-docker",
+				"pkief.material-icon-theme"
+			],
+			"settings": {
+				"workbench.iconTheme": "material-icon-theme"
+			}
+		}
+	}
+}
