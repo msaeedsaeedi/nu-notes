@@ -1,10 +1,17 @@
-import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
+import { defineDocs, defineConfig, frontmatterSchema } from 'fumadocs-mdx/config';
+import { z } from 'zod'
 
 export const notes = defineDocs({
   dir: 'content/notes',
+  docs: {
+    schema: frontmatterSchema.extend({
+      contributors: z.array(z.string()).default([]),
+    })
+  }
 });
 
 export default defineConfig({
+  lastModifiedTime: 'git',
   mdxOptions: {
     // MDX options
   },
