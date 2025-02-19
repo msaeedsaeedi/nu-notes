@@ -5,7 +5,7 @@ export const notes = defineDocs({
   dir: 'content/notes',
   docs: {
     schema: frontmatterSchema.extend({
-      contributors: z.array(z.string()).default([]),
+      contributors: z.array(z.string())
     })
   }
 });
